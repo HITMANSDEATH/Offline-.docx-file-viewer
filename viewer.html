@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { 
+      font-family: 'Segoe UI', Arial, sans-serif;
+      padding: 0;
+      margin: 0;
+      background-color: #f5f5f5;
+      min-height: 100vh;
+    }
+
+    .document-container {
+      max-width: 816px; /* A4 width in pixels at 96 DPI */
+      min-height: 1056px; /* A4 height in pixels at 96 DPI */
+      margin: 20px auto;
+      padding: 40px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .error {
+      color: #d32f2f;
+      padding: 15px;
+      border: 1px solid #ffcdd2;
+      background-color: #ffebee;
+      border-radius: 4px;
+      margin: 10px 0;
+    }
+
+    #output {
+      min-height: 100px;
+    }
+
+    /* Word-like styling for content */
+    #output {
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #000000;
+    }
+
+    #output h1 {
+      font-size: 24pt;
+      font-weight: bold;
+      margin: 24pt 0 12pt 0;
+    }
+
+    #output h2 {
+      font-size: 18pt;
+      font-weight: bold;
+      margin: 18pt 0 9pt 0;
+    }
+
+    #output h3 {
+      font-size: 14pt;
+      font-weight: bold;
+      margin: 14pt 0 7pt 0;
+    }
+
+    #output p {
+      margin: 0 0 12pt 0;
+    }
+
+    #output ul, #output ol {
+      margin: 12pt 0;
+      padding-left: 36pt;
+    }
+
+    #output li {
+      margin: 6pt 0;
+    }
+
+    #output table {
+      border-collapse: collapse;
+      margin: 12pt 0;
+    }
+
+    #output td, #output th {
+      border: 1px solid #000000;
+      padding: 6pt;
+    }
+
+    #output img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Loading indicator */
+    .loading {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+
+    .loading::after {
+      content: "...";
+      animation: dots 1.5s steps(5, end) infinite;
+    }
+
+    @keyframes dots {
+      0%, 20% { content: "."; }
+      40% { content: ".."; }
+      60% { content: "..."; }
+      80%, 100% { content: ""; }
+    }
+  </style>
+  <script src="mammoth.browser.min.js"></script>
+</head>
+<body>
+  <div class="document-container">
+    <div id="output">Loading</div>
+  </div>
+  <script src="viewer.js"></script>
+</body>
+</html>
