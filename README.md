@@ -10,14 +10,14 @@ A lightweight Chrome/Brave extension to view `.docx` files offline directly in y
 
 ## File Structure
 extension-root/
-├── manifest.json # Extension config
-├── popup.html # Upload UI
-├── popup.js # Handles file reading & storage
-├── viewer.html # Displays DOCX content
-├── viewer.js # Logic for rendering with Mammoth
-├── background.js # Opens viewer tab
-├── mammoth.browser.min.js # DOCX to HTML conversion engine
-└── docx_icon.png # Extension icon
+--manifest.json           # Extension config
+--popup.html              # Upload UI
+--popup.js                # Handles file reading & storage
+--viewer.html             # Displays DOCX content
+--viewer.js               # Logic for rendering with Mammoth
+--background.js           # Opens viewer tab
+--mammoth.browser.min.js  # DOCX to HTML conversion engine
+--docx_icon.png           # Extension icon
 
 
 ## Installation (for developers)
